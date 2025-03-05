@@ -169,7 +169,7 @@ public class Outstanding extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             //System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "select * from outstanding";
@@ -211,7 +211,7 @@ public class Outstanding extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "select * from outstanding";
@@ -275,7 +275,7 @@ public class Outstanding extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             //System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "DELETE FROM outstanding WHERE bill_no = '"+bill_no+"'";
@@ -291,7 +291,7 @@ public class Outstanding extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             //System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "select * from outstanding";
@@ -347,7 +347,7 @@ public class Outstanding extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             //System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "UPDATE outstanding SET paid_amount = paid_amount + "+amount_paid+", due_amount = due_amount - "+amount_paid+" WHERE bill_no = '"+bill_id+"'";
@@ -362,7 +362,7 @@ public class Outstanding extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             //System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "select * from outstanding";
