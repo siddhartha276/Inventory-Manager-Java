@@ -245,7 +245,7 @@ public class Inventory extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "INSERT INTO productdetails (`ProductName`, `rate`, `Quantity`, `Barcode`)" +
@@ -273,7 +273,7 @@ public class Inventory extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             //System.out.println("Success");
             Statement st = con.createStatement();
             if(Quantity.getText()!=null && Price.getText()== null){
@@ -316,7 +316,7 @@ public class Inventory extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             //System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "select * from productdetails";
@@ -356,7 +356,7 @@ public class Inventory extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "DELETE FROM productdetails WHERE `Sr No` = " + sr_no;
@@ -385,7 +385,7 @@ public class Inventory extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             System.out.println("Success");
             Statement st = con.createStatement();
             String sql = "select * from productdetails";
