@@ -163,7 +163,7 @@ public class Sales extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious", "root", "12210708");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious", "(database username)", "(database password");
             String sql = "SELECT * FROM bill";
             
              try (Statement st = con.createStatement();
@@ -219,7 +219,7 @@ public class Sales extends javax.swing.JFrame {
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious", "root", "12210708");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious", "(database username)", "(database password"));
             String sqlQuery = "SELECT SUM(totalAmount) AS totalamount FROM bill WHERE MONTH(bill_date) = ?";
             PreparedStatement preparedStatement = con.prepareStatement(sqlQuery);
         
@@ -288,7 +288,7 @@ public class Sales extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious", "root", "12210708");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious", "(database username)", "(database password"));
 
             String sql;
             switch (timePeriod) {
