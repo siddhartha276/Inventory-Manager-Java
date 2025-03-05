@@ -286,7 +286,7 @@ public class Billing extends javax.swing.JFrame {
         try{
             
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root",""); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             System.out.println("Success");
             Statement st = con.createStatement();
             String q = "Select * from productdetails where barcode = "+barcode;
@@ -303,7 +303,7 @@ public class Billing extends javax.swing.JFrame {
                 int quan = rs.getInt("quantity");
                 if(quan < 50){
                     GEmailSender es = new GEmailSender();
-                    es.sendEmail("siddhartha2704@gmail.com", "billingSystem.gmail.com", "Add Products to Inventory", "The quantity of "+product_name+" is less than 50 please add products to the inventory");
+                    es.sendEmail(" /* Sender */ ", " /* receiver */ ", "Add Products to Inventory", "The quantity of "+product_name+" is less than 50 please add products to the inventory");
                 }
                 if(!multiple_barcodes.contains(barcode)){
                     
@@ -398,7 +398,7 @@ public class Billing extends javax.swing.JFrame {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Statement st = con.createStatement();
 
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root",""); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             System.out.println("Success");
             
             String sql = "insert into bill values(?,?,?,?,?)";
@@ -467,7 +467,7 @@ public class Billing extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","root","12210708"); 
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/petsglorious","(database username)", "(database password")); 
             System.out.println("Success");
             
             String sql = "insert into outstanding values(?,?,?,?,?,?,?)";
